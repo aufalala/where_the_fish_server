@@ -1,0 +1,53 @@
+# -------------------------
+# Node / NPM
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# -------------------------
+# TypeScript
+# -------------------------
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# -------------------------
+# Environment variables
+# -------------------------
+.env
+.env.local
+.env.*.local
+
+# -------------------------
+# Logs
+# -------------------------
+logs/
+*.log
+
+# -------------------------
+# OS / Editor files
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# -------------------------
+# Debug / Temp / Misc
+# -------------------------
+coverage/
+.tmp/
+temp/
+tmp/
+
+# Nodemon
+.nodemon*
