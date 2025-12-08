@@ -1,13 +1,13 @@
 import express from "express";
-// import userRoutes from "./routes/user.routes.js";
+import cors from 'cors';
+import routes from "./routes/index.js";
 
 const app = express();
 
-// Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
-// app.use("/api/users", userRoutes);
+app.use("/api", routes);
 
 export default app;

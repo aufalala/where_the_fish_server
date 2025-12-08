@@ -1,6 +1,9 @@
 import app from "./app.js";
+import { PORT } from './config/env.config.js';
+import { connectDB } from './config/db.config.js';
 
-const PORT = process.env.PORT || 3000;
+
+connectDB();
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
