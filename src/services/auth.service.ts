@@ -90,9 +90,13 @@ export async function refreshTokenService(oldRefreshToken: string) {
     expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
   });
 
+  const user = await User.findById(decoded.id);
+  if (!user) throw new Error("User not found");
+
   return {
     accessToken,
     refreshToken: newRefreshToken,
+    user: { id: decoded.id, username: user.username },
   };
 }
 
