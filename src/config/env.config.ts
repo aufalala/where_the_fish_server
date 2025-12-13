@@ -15,7 +15,7 @@ for (const key of requiredEnv) {
   }
 }
 
-export const PORT = process.env.PORT || 3000;
+export const PORT = Number(process.env.PORT) || 3000;
 export const MONGODB_URI = process.env.MONGODB_URI as string;
 export const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET as string;
 export const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET as string;
