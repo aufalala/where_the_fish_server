@@ -44,6 +44,8 @@ const postSchema: Schema<IPost> = new Schema(
   { timestamps: true }
 );
 
+postSchema.index({ location: "2dsphere" });
+
 const Post: Model<IPost> = mongoose.model<IPost>("Post", postSchema);
 
 export default Post;
